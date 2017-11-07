@@ -10,7 +10,6 @@ public class PlayerAnim
 {
     public AnimationClip Idle;
     public AnimationClip Walk;
-
 }
 
 public class PlayerCtrl : MonoBehaviour {
@@ -43,17 +42,6 @@ public class PlayerCtrl : MonoBehaviour {
 	
 	void Update () 
     {
-        /*
-        if(tr.rotation.x >30 && tr.rotation.x < -30)
-        {
-            tr.Rotate(0, tr.rotation.y, tr.rotation.z);
-        }
-        Debug.Log(tr.rotation.x);
-        if(tr.rotation.y > 30 && tr.rotation.y < -30)
-        {
-            tr.Rotate(tr.rotation.x, tr.rotation.y, 0);
-        }
-        */
         if (Input.GetKeyDown(KeyCode.Escape))
         {
            //1 GameManager = GameObject.Find("GameManager");
@@ -67,8 +55,6 @@ public class PlayerCtrl : MonoBehaviour {
 			//1 Debug.Log("falling");
 			tr.SetPositionAndRotation(new Vector3(tr.position.x, 0, tr.position.z), new Quaternion(0, tr.rotation.y, 0, tr.rotation.w));//new Quaternion(0,-88,0,0)
         }
-       
-        //transform.position += new Vector3(0, 0, 0.1f);
 		float v= CrossPlatformInputManager.GetAxis ("Vertical");//Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ 1.0f
 		float h= CrossPlatformInputManager.GetAxis ("Horizontal");//Input.GetAxis("Horizontal");
 		//float r= Input.GetAxis("Mouse X");
@@ -78,7 +64,6 @@ public class PlayerCtrl : MonoBehaviour {
 
         Vector3 moveDir = (Vector3.forward * v ) + (Vector3.right * h); // 백터합.
         tr.Translate(moveDir.normalized * Time.deltaTime * speed); //그냥 moveDir만 하면 대각선일때 속도가 빨라진다. normalized를 이용하면 방향만을 가져온다.(벡터의 크기를 1로 만듦).
-
 		tr.Rotate(Vector3.up * Time.deltaTime * 100.0f * u); //up을 기준으로, 100은 회전속도.
    
         if (v != 0)
@@ -89,7 +74,6 @@ public class PlayerCtrl : MonoBehaviour {
             }
             walkcount--;
             if (walkcount == 0) walkcount = walknum;
-
             anim.SetFloat("Speed_f",1.0f);
         }
         else
@@ -97,7 +81,5 @@ public class PlayerCtrl : MonoBehaviour {
             anim.SetFloat("Speed_f", 0);
         }
         
-    }
-
-    
+    }  
 }

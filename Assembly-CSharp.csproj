@@ -60,13 +60,33 @@
      <Compile Include="Assets\02.Scripts\ItemCtrl.cs" />
      <Compile Include="Assets\02.Scripts\MyGizmos.cs" />
      <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\PlayerSetup.cs" />
      <Compile Include="Assets\02.Scripts\PopupCtrl.cs" />
      <Compile Include="Assets\02.Scripts\SmoothFollow.cs" />
      <Compile Include="Assets\02.Scripts\TouchItem.cs" />
      <Compile Include="Assets\02.Scripts\UIMgr.cs" />
-     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\AbstractTargetFollower.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\AutoCam.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\FreeLookCam.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\HandHeldCam.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\LookatTarget.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\PivotBasedCameraRig.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
+     <Compile Include="Assets\StandardAssets\Cameras\Scripts\TargetFieldOfView.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <None Include="Assets\StandardAssets\Fonts\OpenSans\License!.txt" />
+     <None Include="Assets\StandardAssets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\StandardAssets\Cameras\CameraGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -100,10 +120,6 @@
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/한휘/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{165092EA-A05F-A744-66FF-7FB36FED430B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
