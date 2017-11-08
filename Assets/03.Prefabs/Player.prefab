@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 95083403617479344}
   - component: {fileID: 54709186098884772}
   - component: {fileID: 65153373332943724}
+  - component: {fileID: 114731270634414754}
   - component: {fileID: 114987051424952074}
   - component: {fileID: 114974336826238200}
   - component: {fileID: 82966457683856364}
@@ -986,6 +987,38 @@ MonoBehaviour:
   m_SnapThreshold: 10
   m_InterpolateRotation: 10
   m_InterpolateMovement: 10
+--- !u!114 &114731270634414754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063491369269170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb37180400f5cd4480e24ee0031d1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePos: {fileID: 4250471403193134}
+  fireSfx: {fileID: 8300000, guid: bc1347bf8e55c1945ba46b9df1119565, type: 3}
+  inventoryPanel: {fileID: 1910349834810888, guid: 2dfab8bd760504546a7d954ba298d5a6,
+    type: 2}
+  inventoryIcons:
+  - {fileID: 1099956892047150, guid: 309bc2438cb35bf4f849bc5d307a35a0, type: 2}
+  - {fileID: 1099956892047150, guid: c42d2551c1fab9a41ab5783103b47164, type: 2}
+  - {fileID: 1501730096569420, guid: ee8edafe2e181a046a179a6771d7382b, type: 2}
+  - {fileID: 1736936831735444, guid: 6e690b513bce4f746a8a76401aa58f02, type: 2}
+  - {fileID: 1736936831735444, guid: 90e8370493a6297428d0b1d773b38fc7, type: 2}
+  - {fileID: 1736936831735444, guid: 99f9d2dd047b09a4986e64eb09ba8924, type: 2}
+  - {fileID: 1736936831735444, guid: a058bf95fe0c7f04387351c2796ce199, type: 2}
+  - {fileID: 1736936831735444, guid: efc7d2441a15a904688a03c02850c2dd, type: 2}
+  - {fileID: 1736936831735444, guid: 2b96420d0b9b6d948b60d124f16ae774, type: 2}
+  - {fileID: 1736936831735444, guid: 7e90c39ed5ddb54428b448674cbb64c6, type: 2}
+  - {fileID: 1736936831735444, guid: c0aaeb677e818a64db85b80af4a9c66f, type: 2}
+  - {fileID: 1736936831735444, guid: 99d74ca2f37a0584ea6cb18bdebac56f, type: 2}
+  - {fileID: 1736936831735444, guid: a911306ad65aaa7478559de4f1598eec, type: 2}
+  - {fileID: 1736936831735444, guid: a0ac82be75b7bf84586358b864c704ef, type: 2}
+  BoardPanel: {fileID: 1514879199610890, guid: 648e6531a1d825942959a8d8c6185c8d, type: 2}
+  fireRate: 0.5
 --- !u!114 &114974336826238200
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,7 +18,7 @@ public class FireCtrl : MonoBehaviour
     public float fireRate = 0.5f; //0.1초 간격으로 아이템 먹음.
     private float nextFire = 0.5f; //다음에 발사할 시간;
 
-	private int countraycast = 25;
+	private int countraycast = 20;
 	private float raycastdis = 3.0f;
 
     private AudioSource _audio;
@@ -42,14 +42,11 @@ public class FireCtrl : MonoBehaviour
 			Debug.DrawRay(pos+i*addpos, firePos.forward * raycastdis, Color.green); //초록색 광선의 Raycast
             
 		}
-
-
-
+			
 		if (CrossPlatformInputManager.GetButtonDown ("Shoot"))//Input.GetMouseButton(0)) //getMouseButtonDown//getMouseButton만 해리면 누르고 있는 동안 계속해서 발사됨. 0은 왼쪽 1은 오른쪽 2는 가운데 버튼.
         {
             
             StartCoroutine(ShowMotion(0.25f));
-
             if (Time.time >= nextFire) //Time.time은 시간 누적
             {
                 nextFire = Time.time + fireRate;
@@ -59,8 +56,7 @@ public class FireCtrl : MonoBehaviour
 					{//1<<8은 10진수로 256인데, 8번 layer만 레이케스트로 반응하겠다는 뜻 .
                      //256을 써도 되는데 비트연산자를 쓰게 되면 1<<8 ! 1<<9  (or연산) 이런게 가능.
                         _audio.PlayOneShot(fireSfx, 0.8f); //아이템 줍는 소리.
-                        //Debug.Log(hit.collider.gameObject.name);
-						hit.collider.gameObject.GetComponent<ItemCtrl>().OnDamage(hit.point); //hit.point는 맞은 지점
+						hit.collider.gameObject.GetComponent<NetworkItemCtrl>().OnDamage(hit.point); //hit.point는 맞은 지점
 						
 						int itemindex = Random.Range(0, name.Length); // 1에서 길이까지 랜덤.
 

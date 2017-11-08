@@ -58,7 +58,9 @@
      <Compile Include="Assets\02.Scripts\FireCtrl.cs" />
      <Compile Include="Assets\02.Scripts\GameMgr.cs" />
      <Compile Include="Assets\02.Scripts\ItemCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\ItemSpawner.cs" />
      <Compile Include="Assets\02.Scripts\MyGizmos.cs" />
+     <Compile Include="Assets\02.Scripts\NetworkItemCtrl.cs" />
      <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
      <Compile Include="Assets\02.Scripts\PlayerSetup.cs" />
      <Compile Include="Assets\02.Scripts\PopupCtrl.cs" />
