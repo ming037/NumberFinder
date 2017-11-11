@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class ItemSpawner : NetworkBehaviour {
+
+
+	private Transform[] points; //spawn location
+
 	public GameObject itemPrefab;
-
-	[SerializeField]
-	public Transform[] points; //spawn location
-
 	public override void OnStartServer()
 	{
 		points = GameObject.Find ("SpawnPointGroup").GetComponentsInChildren<Transform> ();
@@ -20,5 +20,13 @@ public class ItemSpawner : NetworkBehaviour {
 			item.name = "item_" + i.ToString ("00");
 			NetworkServer.Spawn (item);
 		}
+	
 	}
+		
+	public override void OnStartClient()
+	{
+		ClientScene.RegisterPrefab(itemPrefab);
+	}
+
+
 }

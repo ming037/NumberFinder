@@ -22,6 +22,14 @@ TagManager:
   - 1
   - 2
   - 7
+  - warningpanel
+  - scorepanel
+  - warningtest
+  - itempanel
+  - timepanel
+  - boardpanel
+  - ResultPanel
+  - item
   layers:
   - Default
   - TransparentFX

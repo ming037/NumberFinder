@@ -824,7 +824,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063491369269170}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 375cf1924fc683840b4f1454561701db, type: 3}
@@ -1000,8 +1000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePos: {fileID: 4250471403193134}
   fireSfx: {fileID: 8300000, guid: bc1347bf8e55c1945ba46b9df1119565, type: 3}
-  inventoryPanel: {fileID: 1910349834810888, guid: 2dfab8bd760504546a7d954ba298d5a6,
-    type: 2}
   inventoryIcons:
   - {fileID: 1099956892047150, guid: 309bc2438cb35bf4f849bc5d307a35a0, type: 2}
   - {fileID: 1099956892047150, guid: c42d2551c1fab9a41ab5783103b47164, type: 2}

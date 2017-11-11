@@ -22,13 +22,13 @@ GameObject:
   - component: {fileID: 33572625789947262}
   - component: {fileID: 65041259220884868}
   - component: {fileID: 23784382710360196}
-  - component: {fileID: 114273998924599124}
   - component: {fileID: 54749478267475294}
-  - component: {fileID: 114358552201432472}
-  - component: {fileID: 114758830928479458}
+  - component: {fileID: 114672278315513874}
+  - component: {fileID: 114006129669172710}
+  - component: {fileID: 114086279416604766}
   m_Layer: 8
   m_Name: item
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,22 +114,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114273998924599124
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367731286726332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcfa45bb3838de149ab5f1125a00f0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textures: []
-  _renderer: {fileID: 0}
-  test: {fileID: 0}
-  testImage: {fileID: 0}
---- !u!114 &114358552201432472
+--- !u!114 &114006129669172710
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -161,7 +146,28 @@ MonoBehaviour:
     i15: 114
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &114758830928479458
+--- !u!114 &114086279416604766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367731286726332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.09090909
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114672278315513874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -172,4 +178,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8badc0ee281a3ce45b6c0be2447c138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnHit: 0
