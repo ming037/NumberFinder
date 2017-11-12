@@ -1,9 +1,9 @@
 Android
-f4f002061bbca0a1af2d167c5fa9683a Assembly-CSharp.dll:.countDownTimer
+e8f99adaeac8e10fbcddd0a0958c03f6 Assembly-CSharp.dll:.countDownTimer
 a5073d485a408f0c55981ec0a165ac21 Assembly-CSharp.dll:.MyGizmos
 84b1076499d7dff814c195b256145cc8 Assembly-CSharp.dll:.ItemCtrl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TouchItem
-1705c84a71d05088db36f5d82253837c Assembly-CSharp.dll:.FireCtrl
+b2f5c45868b904f31c06763c04ee89eb Assembly-CSharp.dll:.FireCtrl
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -16,9 +16,9 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-41d3ee009f829954037ef74eb5fc520f Assembly-CSharp.dll:.ButtonCtrl
-967776f30e617b92485a34970441596d Assembly-CSharp.dll:.ItemSpawner
-f8d94b947fbc966c436a1e755319ebb1 Assembly-CSharp.dll:.PlayerCtrl
+dc52d2373f70cff5ff99316794562a1d Assembly-CSharp.dll:.ButtonCtrl
+2517d5af16a1ae7c4c205266ade3df9a Assembly-CSharp.dll:.ItemSpawner
+ee75a44cd59829dfed5dfc534fd89c71 Assembly-CSharp.dll:.PlayerCtrl
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -120,7 +120,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-e2eb57f0af44bf185af1aebedc8d8cca Assembly-CSharp.dll:.GameManage
+c0cba6ce0ba2b80d563a2bc4ca2245c4 Assembly-CSharp.dll:.GameManage
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -129,7 +129,7 @@ fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp.dll:UnityStandardAssets.CrossPl
 a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 5845f717f96906afdaa5742d8f732e22 Assembly-CSharp.dll:.BulletCtrl
-0dc2d3e68ba2b9c07a75be5847935282 Assembly-CSharp.dll:.PopupCtrl
+1807264bd9a80085bb8334391e225b43 Assembly-CSharp.dll:.PopupCtrl
 16756866ef08c5c05c6229db9418c551 Assembly-CSharp.dll:UnityStandardAssets.Cameras.FreeLookCam
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -158,8 +158,9 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+91d33ae0618a7bdba768b326cd63d0c0 Assembly-CSharp.dll:.UICtrl
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e5383af8471170254bf768c7bf16b836 Assembly-CSharp.dll:.GameMgr
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
+17183ebe243ae9fd341f4ff13d350274 Assembly-CSharp.dll:.CustomNetworkManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkItemCtrl
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerItemCtrl

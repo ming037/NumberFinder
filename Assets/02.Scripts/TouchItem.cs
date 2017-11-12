@@ -16,7 +16,7 @@ public class TouchItem : MonoBehaviour {
         GameObject t;
         GameManager = GameObject.Find("GameManager"); //보드에 있는 아이템 수를 알아내기 위해서 스크립트 가져오는 용도.
         int number = 0 ;
-        if(GameManager.gameObject.GetComponent<GameMgr>().iteminsertMode == true)
+		if(GameManager.gameObject.GetComponent<GameManage>().iteminsertMode == true)
         {//평소에는 클릭 안되게 만들기
             if (this.transform.Find("Text").GetComponent<Text>().text == " ")
             {
@@ -27,12 +27,12 @@ public class TouchItem : MonoBehaviour {
 
             if (!(this.transform.Find("Text").GetComponent<Text>().text == ""))  //판에 들어가 있는 객체가 아니면.
             {
-                if (GameManager.gameObject.GetComponent<GameMgr>().itemOnBoard == MAX) //아이템 6개이면
+				if (GameManager.gameObject.GetComponent<GameManage>().itemOnBoard == MAX) //아이템 6개이면
                 {
                     StartCoroutine(ShowMessage("6개 이상 놓을 수 없습니다!", 2));
                     return;
                 }
-                GameManager.gameObject.GetComponent<GameMgr>().itemOnBoard++;
+				GameManager.gameObject.GetComponent<GameManage>().itemOnBoard++;
                 //Debug.Log(obj.gameObject.GetComponent<GameMgr>().itemOnBoard);
                 number = System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text);
 
@@ -54,7 +54,7 @@ public class TouchItem : MonoBehaviour {
 
             else //보드에 있는 경우 다시 돌리기.
             {
-                GameManager.gameObject.GetComponent<GameMgr>().itemOnBoard--;
+				GameManager.gameObject.GetComponent<GameManage>().itemOnBoard--;
                 //Debug.Log(obj.gameObject.GetComponent<GameMgr>().itemOnBoard);
                 //일단 찾고.
                 foreach (Transform child in itempanel.transform)

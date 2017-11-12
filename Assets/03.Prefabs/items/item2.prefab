@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222788473906134270}
   - component: {fileID: 114598861913730468}
   - component: {fileID: 114734422313811532}
-  - component: {fileID: 114662176886930166}
+  - component: {fileID: 114098095088008374}
   m_Layer: 5
   m_Name: item2
   m_TagString: 2
@@ -47,6 +47,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114098095088008374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501730096569420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7be85602f02e69468c5106d5325c833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114385810651415016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,17 +118,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114662176886930166
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1501730096569420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4217bc2f9fc26584ba2ed8fab8a5d2e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114734422313811532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114662176886930166}
+      - m_Target: {fileID: 114098095088008374}
         m_MethodName: selectItem
         m_Mode: 1
         m_Arguments:

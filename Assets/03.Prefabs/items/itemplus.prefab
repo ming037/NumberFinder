@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114285954525680124}
   - component: {fileID: 114652259195136232}
   - component: {fileID: 114433424828770880}
+  - component: {fileID: 114653911063831458}
   m_Layer: 5
   m_Name: itemplus
   m_TagString: add
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114652259195136232}
+      - m_Target: {fileID: 114653911063831458}
         m_MethodName: selectItem
         m_Mode: 1
         m_Arguments:
@@ -135,6 +136,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4217bc2f9fc26584ba2ed8fab8a5d2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114653911063831458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736936831735444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7be85602f02e69468c5106d5325c833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114800765103818580

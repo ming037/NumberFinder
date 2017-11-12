@@ -5,36 +5,36 @@ using UnityEngine.UI;
 
 public class countDownTimer : MonoBehaviour {
 
-    float timeRemaining = 180;
+    public float timeRemaining;
     public Text timeText;
 
     private GameObject GameManager;
-    public GameObject TimeupPanel;
+    public GameObject TimeupCanvas;
     
 
     private void Start()
     {
-        timeText.text = "";
+		timeRemaining = 0;
+		timeText.text = "패널티: " + (int)timeRemaining;
     }
+
     void Update () {
-        GameManager = GameObject.Find("GameManager");
-        if (GameManager.gameObject.GetComponent<GameMgr>().timeFlow) timeRemaining -= Time.deltaTime;
+		if (timeRemaining > 0) timeRemaining -= Time.deltaTime;
+
 	}
    
     private void OnGUI()
     {
         if(timeRemaining > 0)
         {
-            timeText.text = "남은 시간: " + (int)timeRemaining;
+            timeText.text = "패널티: " + (int)timeRemaining;
         }
         else
-        {
-            float highscore = GameManager.gameObject.GetComponent<GameMgr>().highScore;
-            GameManager = GameObject.Find("GameManager");
-            GameManager.gameObject.GetComponent<GameMgr>().EndtimeText.text = "Score "+ highscore;
-            timeText.text = "시간 종료";
-            
-            TimeupPanel.SetActive(true);  //팝업 나오게 하기
+		{
+            //float highscore = gameObject.GetComponent<GameManage>().highScore;
+            //gameObject.GetComponent<GameManage>().EndtimeText.text = "Score "+ highscore;
+            //timeText.text = "시간 종료";
+            //TimeupCanvas.SetActive(true);  //팝업 나오게 하기
         }
     }
 }

@@ -26,6 +26,11 @@ public class UIMgr : MonoBehaviour
         SceneManager.LoadScene("NumberFinder", LoadSceneMode.Single); //LoadScene는 열려있는 씬을 지우고 여는 것 
     }
 
+	public void OnMultiBtnClick()
+	{
+		SceneManager.LoadScene("Multi", LoadSceneMode.Single);
+	}
+
     public void OnRankBtnClick()
     {
         loadScore(); //점수 불러오기

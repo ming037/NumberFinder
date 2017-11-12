@@ -28,7 +28,8 @@ public class PlayerCtrl : MonoBehaviour {
     const int walknum = 10;
     private int walkcount = walknum;
     
-    public GameObject popuppanel;
+    //public GameObject popuppanel;
+	private GameObject UIControl;
     private GameObject GameManager;
 
     // Use this for initialization
@@ -44,9 +45,9 @@ public class PlayerCtrl : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-           //1 GameManager = GameObject.Find("GameManager");
-			//1 GameManager.gameObject.GetComponent<GameMgr>().timeFlow = false;
-			//1 popuppanel.SetActive(true); //팝업창 켜기
+           	GameManager = GameObject.Find("GameManager");
+			UIControl = GameObject.Find ("UIControl");
+			UIControl.GetComponent<UICtrl> ().SetPopupCancvas(true); //팝업창 켜기
 			//1 Debug.Log("end");
         }
 

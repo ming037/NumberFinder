@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ButtonCtrl : MonoBehaviour {
     public GameObject BoardCanvas;
-    private GameObject BoardPanel;
-    private GameObject ResultPanel;
-    private GameObject GameManager;
+    public GameObject BoardPanel;
+    public GameObject ResultPanel;
+    public GameObject GameManager;
     private AudioSource _audio;
     public Text warningText;
 
@@ -16,6 +16,9 @@ public class ButtonCtrl : MonoBehaviour {
     private int[] check = new int[MAX]; //연산기호 체크용 배열. 연산장치는1, 숫자느 0.
     private int itemCount = 0; //아이템 개수.
     public AudioClip submitsound;
+
+	public bool isPenalty;
+
 
     public struct symbol
     {
@@ -32,17 +35,22 @@ public class ButtonCtrl : MonoBehaviour {
         public int end_i;
     }
 
+	void start()
+	{
+		isPenalty = false;
+	}
+
 
     public void Submit()//제출버튼.
 	{
+		if (GameManager.GetComponent<countDownTimer> ().timeRemaining > 0)
+			return;
         string result = "";
         warningText.text = "";
         symbol[] symbols = new symbol[MAX]; //연산 기호 담을 배열
         numbers[] number = new numbers[MAX]; //숫자 담을 배열
 
-        GameManager = GameObject.Find("GameManager"); //보드에 있는 아이템 수를 알아내기 위해서 스크립트 가져오는 용도.
-        ResultPanel = GameObject.FindWithTag("ResultPanel");
-        BoardPanel = GameObject.FindWithTag("boardpanel");
+       // GameManager = GameObject.Find("GameManager"); //보드에 있는 아이템 수를 알아내기 위해서 스크립트 가져오는 용도.
         _audio = GetComponent<AudioSource>();
         itemCount = 0;
         /*
@@ -84,7 +92,7 @@ public class ButtonCtrl : MonoBehaviour {
         }
         /***************************************/
 
-        Debug.Log("itemCount=" + itemCount);
+        //Debug.Log("itemCount=" + itemCount);
         int symbol_cnt = 0; //연산자 개수 초기화
         for (int i = 0; i < itemCount; i++)
         {
@@ -113,7 +121,7 @@ public class ButtonCtrl : MonoBehaviour {
         if(symbolruleViolation1() || symbolruleViolation2()) //둘 중 하나라도 false면 실패
         {
             resetsetting(); //세팅 초기화
-            Debug.Log("ERROR, SYMBOL ERROR");
+            //Debug.Log("ERROR, SYMBOL ERROR");
             StartCoroutine(ShowMessage("계산식에 오류가 있습니다!", 2));
             GameMgr.instance.IncScore(-50.0f);
             return;
@@ -254,38 +262,54 @@ public class ButtonCtrl : MonoBehaviour {
             }
         }
 
-        Debug.Log(result);
-        Debug.Log(System.Int32.Parse(result));
+        //Debug.Log(result);
+        //Debug.Log(System.Int32.Parse(result));
         
 
         //Debug.Log((GameManager.gameObject.GetComponent<GameMgr>().resultnum));
-        if (GameManager.gameObject.GetComponent<GameMgr>().resultnum == System.Int32.Parse (result)) //결과가 같았을 경우.
+		if (GameManager.GetComponent<GameManage>().resultnum == System.Int32.Parse (result)) //결과가 같았을 경우.
         {
-            GameMgr.instance.IncScore(100.0f); //점수 100점 추가
+			//GameManager.GetComponent<GameManage>().IncScore(100.0f); //점수 100점 추가
+			GameManager.GetComponent<GameManage>().LeftScore();
             submitsound = Resources.Load("sounds/correct") as AudioClip;
             _audio.PlayOneShot(submitsound, 1f);
             StartCoroutine(ShowMessage("성공!", 2));
-            Debug.Log("SAME");
+            //Debug.Log("SAME");
             
         }
         else //결과가 달랐을경우.
         {
-            GameMgr.instance.IncScore(-50.0f); //점수 50점 감소
+			//GameManager.GetComponent<GameManage>().IncScore(-50.0f); //점수 50점 감소
             submitsound = Resources.Load("sounds/wrong") as AudioClip;
             _audio.PlayOneShot(submitsound, 1f);
             StartCoroutine(ShowMessage("실패!", 2));
-            Debug.Log("Different");
+			GameManager.GetComponent<countDownTimer> ().timeRemaining = 10;
+            //Debug.Log("Different");
         }
 
         resetsetting(); //설정 초기화
     }
 
+	public void Skip()
+	{
+		if (GameManager.GetComponent<countDownTimer> ().timeRemaining > 0)
+			return;
+
+		GameManager.GetComponent<countDownTimer> ().timeRemaining = 10;
+		foreach (Transform child in ResultPanel.transform)
+		{
+			Destroy(child.gameObject);
+		}
+		GameManager.gameObject.GetComponent<GameManage>().itemOnBoard = 0;
+		GameManager.gameObject.GetComponent<GameManage>().Makeresult();
+	}
+
 	public void Cancel() //취소버튼.
 	{
        
-        GameManager = GameObject.Find("GameManager");
-        GameManager.gameObject.GetComponent<GameMgr>().timeFlow = true; //다시 시간 흐르게 하기
-        GameManager.gameObject.GetComponent<GameMgr>().iteminsertMode = false;//게임판 아닐 때 숫자 클릭 못하도록
+        //1GameManager = GameObject.Find("GameManager");
+        //1GameManager.gameObject.GetComponent<GameMgr>().timeFlow = true; //다시 시간 흐르게 하기
+		GameManager.gameObject.GetComponent<GameManage>().iteminsertMode = false;//게임판 아닐 때 숫자 클릭 못하도록
         BoardCanvas.SetActive (false);
 	}
 
@@ -322,8 +346,8 @@ public class ButtonCtrl : MonoBehaviour {
             check[i] = 0;
         }
 
-        GameManager.gameObject.GetComponent<GameMgr>().itemOnBoard = 0;
-        GameManager.gameObject.GetComponent<GameMgr>().Makeresult();
+		GameManager.gameObject.GetComponent<GameManage>().itemOnBoard = 0;
+        GameManager.gameObject.GetComponent<GameManage>().Makeresult();
         //점수 올리고, 숫자 바꾸기
 
     }

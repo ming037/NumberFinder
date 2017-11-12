@@ -22,13 +22,12 @@ public class PlayerSetup :NetworkBehaviour
 				sceneCamera.gameObject.SetActive (false);
 			}
 		}
-		//gameObject.GetComponent<GameManage> ().isPlayerSpawned = true;
 	}
 
 	void Update()
 	{
 		if (isServer) {
-			for (int i = 0; i < 72; i++) {
+			for (int i = 0; i < 73; i++) {
 				if (itemlist.Contains (i)) {
 					GameObject fordestroy = GameObject.Find ("item_"+i.ToString("00"));
 					Destroy (fordestroy);

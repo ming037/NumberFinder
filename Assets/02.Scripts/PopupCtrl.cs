@@ -6,30 +6,30 @@ using UnityEngine.UI;
 
 public class PopupCtrl : MonoBehaviour {
 
-    public GameObject popuppanel;
-    private GameObject GameManager;
+    //public GameObject popupcanvas;
+    public GameObject GameManager;
     public InputField inputText;
     
 
     public void restartbtn()
     {
-        GameManager = GameObject.Find("GameManager");
-        saveScore(GameManager.gameObject.GetComponent<GameMgr>().highScore);//점수 저장 로직 
-        SceneManager.LoadScene("NumberFinder");
+        //GameManager = GameObject.Find("GameManager");
+		saveScore(GameManager.gameObject.GetComponent<GameManage>().highScore);//점수 저장 로직 
+        //SceneManager.LoadScene("NumberFinder");
     }
 
     public void finishbtn()
     {
-        GameManager = GameObject.Find("GameManager");
-        saveScore(GameManager.gameObject.GetComponent<GameMgr>().highScore);//점수 저장 로직 
-        SceneManager.LoadScene("Main");
+        //GameManager = GameObject.Find("GameManager");
+		saveScore(GameManager.gameObject.GetComponent<GameManage>().highScore);//점수 저장 로직 
+        //SceneManager.LoadScene("Main");
     }
 
     public void cancelbtn()
     {
-        GameManager = GameObject.Find("GameManager");
-        GameManager.gameObject.GetComponent<GameMgr>().timeFlow = true;
-        popuppanel.SetActive(false);
+        //GameManager = GameObject.Find("GameManager");
+		gameObject.GetComponent<UICtrl> ().SetPopupCancvas (false);
+        //popupcanvas.SetActive(false);
     }
 
     private void saveScore(float score)

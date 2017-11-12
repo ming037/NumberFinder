@@ -2,36 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-
 public class NetworkItemCtrl : NetworkBehaviour {
 
-	public void OnDamage(Vector3 pos)
-	{
-		CmdDestroy ();
-
-		//gameObject.SetActive (false);
-		//Destroy (gameObject);
-	}
+	private GameObject ItemSpawner;
 
 	[Command]
-	void CmdDestroy()
+	public void CmdDestroy(GameObject player)
 	{
-		string todestroy = gameObject.name.Substring(5,2);
-		//print (todestroy);
+		ItemSpawner = GameObject.Find ("ItemSpawner");
+		ItemSpawner.GetComponent<ItemSpawner> ().itemcnt -= 1;
+		//print (ItemSpawner.GetComponent<ItemSpawner> ().itemcnt);
+		string todestroy = this.gameObject.name.Substring(5,2);
 		int destroyindex = System.Int32.Parse (todestroy);
-		print (destroyindex);
-		this.gameObject.GetComponent<PlayerSetup> ().AddtoList(destroyindex);
-		//gameObject.GetComponent<PlayerSetup> ().itemlist.Add (destroyindex);
-		//string todestroy = gameObject.name.Substring(5,2);
-		//gameObject.GetComponent<PlayerSetup> ().itemlist [System.Int32.Parse (todestroy)] = 0;
+		//print (destroyindex);
+		player.gameObject.GetComponent<PlayerSetup> ().AddtoList(destroyindex);
 	}
-
-
-
-
-
-
-
-
 
 }
