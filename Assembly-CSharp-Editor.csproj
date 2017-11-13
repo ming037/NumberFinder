@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\StandardAssets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <None Include="Assets\MenuBoard\Doc\ReadMe.txt" />
      <None Include="Assets\StandardAssets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\StandardAssets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\StandardAssets\Cameras\CameraGuidelines.txt" />

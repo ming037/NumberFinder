@@ -51,24 +51,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\02.Scripts\BulletCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\ButtonCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\countDownTimer.cs" />
-     <Compile Include="Assets\02.Scripts\CustomNetworkManager.cs" />
      <Compile Include="Assets\02.Scripts\ExtensionMethods.cs" />
-     <Compile Include="Assets\02.Scripts\FireCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\GameManage.cs" />
-     <Compile Include="Assets\02.Scripts\GameMgr.cs" />
-     <Compile Include="Assets\02.Scripts\ItemCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\ItemSpawner.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetButtonCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetcountDownTimer.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetCustomNetworkManager.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetFireCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetGameManage.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetItemSpawner.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetPlayerCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetPlayerSetup.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetPopupCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetTouchItem.cs" />
+     <Compile Include="Assets\02.Scripts\forNet\NetUICtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\ButtonCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\countDownTimer.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\FireCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\GameMgr.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\ItemCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\PlayerCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\PopupCtrl.cs" />
+     <Compile Include="Assets\02.Scripts\forSingle\TouchItem.cs" />
      <Compile Include="Assets\02.Scripts\MyGizmos.cs" />
-     <Compile Include="Assets\02.Scripts\NetworkItemCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
-     <Compile Include="Assets\02.Scripts\PlayerSetup.cs" />
-     <Compile Include="Assets\02.Scripts\PopupCtrl.cs" />
      <Compile Include="Assets\02.Scripts\SmoothFollow.cs" />
-     <Compile Include="Assets\02.Scripts\TouchItem.cs" />
-     <Compile Include="Assets\02.Scripts\UICtrl.cs" />
      <Compile Include="Assets\02.Scripts\UIMgr.cs" />
      <Compile Include="Assets\StandardAssets\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\StandardAssets\Cameras\Scripts\AutoCam.cs" />
@@ -89,6 +93,7 @@
      <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\TiltInput.cs" />
      <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\StandardAssets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <None Include="Assets\MenuBoard\Doc\ReadMe.txt" />
      <None Include="Assets\StandardAssets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\StandardAssets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\StandardAssets\Cameras\CameraGuidelines.txt" />
