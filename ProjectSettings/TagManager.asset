@@ -30,6 +30,8 @@ TagManager:
   - boardpanel
   - ResultPanel
   - item
+  - popuppanel
+  - charac
   layers:
   - Default
   - TransparentFX

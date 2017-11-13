@@ -35,6 +35,9 @@ public class NetItemSpawner : NetworkBehaviour {
 		
 	public override void OnStartClient()
 	{
+
+
+
 		itemPanel.SetActive (true); 
 		ClientScene.RegisterPrefab(itemPrefab);
 	}

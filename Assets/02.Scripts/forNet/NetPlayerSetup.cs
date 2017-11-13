@@ -11,6 +11,7 @@ public class NetPlayerSetup :NetworkBehaviour
 	Camera sceneCamera;
 	void Start ()
 	{
+		
 		if (!isLocalPlayer) {
 			for (int i = 0; i < componetntsToDisable.Length; i++) {
 				componetntsToDisable [i].enabled = false;
